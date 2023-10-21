@@ -55,11 +55,10 @@ address {
 }
 
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
-  /* outline: 2px solid red; */
 }
 
 /*=============================HEADER=============================*/
@@ -248,17 +247,18 @@ address {
 /*=============================FEATURES=============================*/
 
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .features-item {
-  width: calc((100% - 24px * 3) / 4);
+  /* width: calc((100% - 24px * 3) / 4); */
 }
 
 .features-rectangle {
@@ -271,6 +271,7 @@ address {
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
+  display: none;
 }
 
 .features-icon {
@@ -279,16 +280,19 @@ address {
 
 .features-subtitle {
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-item-text {
   color: #434455;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -870,3 +874,44 @@ address {
 }
 
 /*==============================MODAL=============================*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .features-list {
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 24px;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .features-list {
+    flex-wrap: nowrap;
+  }
+
+  .features-item {
+    width: calc((100% - 24px * 3) / 4);
+  }
+
+  .features-rectangle {
+    display: flex;
+  }
+
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
