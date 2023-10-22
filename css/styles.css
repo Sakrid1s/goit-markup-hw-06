@@ -136,29 +136,6 @@ address {
   bottom: -1px;
 }
 
-/* .header-menu-link::after {
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-  position: absolute;
-  bottom: -1px;
-} */
-
-/* .header-menu-link:hover::after,
-.header-menu-link:focus::after {
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-  position: absolute;
-  bottom: -1px;
-} */
-
 .header address {
   margin-left: auto;
 }
@@ -235,6 +212,13 @@ address {
   display: block;
   margin: 0 auto;
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #404bbf;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 /*=============================HERO=============================*/
@@ -433,11 +417,11 @@ address {
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .footer-logo-text {
-  /* margin-right: 120px; comp*/
 }
 
 .footer-logo {
@@ -466,7 +450,6 @@ address {
 }
 
 .footer-soc {
-  margin-right: 80px;
 }
 
 .footer-soc-subtitle {
@@ -475,11 +458,13 @@ address {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
   margin-bottom: 16px;
 }
 
 .footer-soc-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -498,13 +483,13 @@ address {
   background-color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-soc-icon {
-  fill: #f4f4fd;
-}
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31d0aa;
+}
+.footer-soc-icon {
+  fill: #f4f4fd;
 }
 
 .footer-subscribe-form {
@@ -515,19 +500,14 @@ address {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
   margin-bottom: 16px;
 }
 
-/* .footer-form-btn {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
-} */
-
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 }
@@ -537,6 +517,7 @@ address {
   height: 40px;
   border-radius: 4px;
   border: 1px solid #fff;
+  opacity: 0.3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
   padding: 0 16px;
@@ -572,15 +553,16 @@ address {
   background-color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-btn-icon {
-  fill: #ffffff;
-  margin-left: 16px;
-}
 
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
   background-color: #404bbf;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.footer-btn-icon {
+  fill: #ffffff;
+  margin-left: 16px;
 }
 
 /*=============================FOOTER=============================*/
@@ -601,15 +583,15 @@ address {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -776,8 +758,6 @@ address {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  /* display: flex;
-  text-align: center; */
 }
 
 .modal-checkbox-label a {
@@ -879,7 +859,36 @@ address {
   }
 
   .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: baseline;
+    gap: 72px 24px;
+  }
+
+  .footer-logo-text {
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-soc-subtitle {
+    text-align: left;
+  }
+
+  .footer-subscribe-text {
+    text-align: left;
+  }
+
+  .footer-form {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 }
 
@@ -902,16 +911,6 @@ address {
 
   .hero-title {
     margin-bottom: 48px;
-  }
-
-  .hero-btn {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hero-btn:hover,
-  .hero-btn:focus {
-    background-color: #404bbf;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   }
 
   .features {
@@ -1020,5 +1019,23 @@ address {
 
   .footer {
     padding: 100px 0;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-logo-text {
+    margin-right: 120px;
+  }
+
+  .footer-soc {
+    margin-right: 80px;
+  }
+
+  .footer-input {
+    opacity: 1;
   }
 }
