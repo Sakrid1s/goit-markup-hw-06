@@ -74,6 +74,9 @@ address {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header-navigation {
@@ -97,7 +100,7 @@ address {
 }
 
 .header-menu-list {
-  display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -137,6 +140,7 @@ address {
 }
 
 .header address {
+  display: none;
   margin-left: auto;
 }
 
@@ -161,6 +165,18 @@ address {
 .header-address-link:hover,
 .header-address-link:focus {
   color: #404bbf;
+}
+
+.menu-open-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.menu-icon {
 }
 
 /*=============================HEADER=============================*/
@@ -815,6 +831,29 @@ address {
     max-width: 768px;
   }
 
+  .header-container {
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header-logo {
+    margin-right: 120px;
+  }
+
+  .header-menu-list {
+    display: flex;
+  }
+
+  .header address {
+    display: flex;
+    /* margin-left: 120px; */
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
   .hero {
     padding: 112px 0;
     background-image: linear-gradient(
@@ -921,6 +960,14 @@ address {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .header address {
+    margin-left: auto;
   }
 
   .hero {
